@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <circle cx="250" cy="250" r="240" fill="#0052cc" />
+  <path d="M250 30c121.5 0 220 98.5 220 220s-98.5 220-220 220S30 371.5 30 250 128.5 30 250 30m0-10C123.1 20 20 123.1 20 250s103.1 230 230 230 230-103.1 230-230S376.9 20 250 20z" fill="#fff"/>
+  <text x="250" y="150" font-family="Arial, sans-serif" font-size="45" font-weight="bold" text-anchor="middle" fill="#fff">JILIN UNIVERSITY</text>
+  <text x="250" y="200" font-family="Arial, sans-serif" font-size="45" font-weight="bold" text-anchor="middle" fill="#fff">CHINA</text>
+  <text x="250" y="350" font-family="Arial, sans-serif" font-size="60" font-weight="bold" text-anchor="middle" fill="#fff">1946</text>
+  <path d="M250 220c-30 0-60 20-60 60 0 20 10 30 30 40h60c20-10 30-20 30-40 0-40-30-60-60-60z" fill="none" stroke="#fff" stroke-width="8"/>
+  <path d="M220 280c0 0 10 20 30 20 20 0 30-20 30-20" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M250 300v-40" fill="none" stroke="#fff" stroke-width="8"/>
+  <path d="M230 400c0 0 20-10 40 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <path d="M270 400c0 0 20 10 40 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+</svg>

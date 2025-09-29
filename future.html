@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biomod - Future</title>
+    <link rel="stylesheet" href="./ai-assistant.css" />
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; margin: 0; background-color: #fff; }
+      a { color: inherit; text-decoration: none; }
+      .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+      header { position: sticky; top: 0; z-index: 100; backdrop-filter: saturate(120%) blur(6px); background: rgba(255,255,255,0.8); border-bottom: 1px solid #eef2f7; }
+      .nav { display: flex; align-items: center; height: 56px; }
+      .brand { font-weight: 700; color: #1f2937; }
+      .spacer { flex: 1; }
+      .nav-links { display: none; gap: 16px; font-size: 14px; }
+      .nav-links a { color: #334155; font-weight: 500; transition: color 0.2s; }
+      .nav-links a:hover { color: #007bff; }
+      /* --- 为当前激活的导航链接添加高亮样式 --- */
+      .nav-links a.active {
+        color: #007bff;
+        font-weight: 700;
+      }
+      .hamburger { width: 40px; height: 40px; border-radius: 10px; border: 1px solid #e5e7eb; display: grid; place-items: center; background: #fff; }
+      @media (min-width: 960px) { .nav-links { display: flex; } .hamburger { display: none; } }
+      .mobile-menu { position: fixed; inset: 0; background: rgba(15,23,42,0.5); display: none; z-index: 1000; }
+      .mobile-menu.open { display: block; }
+      .mobile-panel { position: absolute; top: 0; right: 0; width: 78vw; max-width: 360px; height: 100%; background: #ffffff; box-shadow: -8px 0 32px rgba(0,0,0,0.15); padding: 20px; overflow: auto; }
+      .mobile-panel a { display: block; padding: 14px 8px; font-size: 18px; color: #0f172a; border-bottom: 1px solid #f1f5f9; }
+      
+      .content-page {
+        min-height: calc(100vh - 56px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0;
+      }
+      .content-page .inner {
+        max-width: 800px;
+        text-align: center;
+      }
+      .content-page h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+      .content-page p { font-size: 1.2rem; line-height: 1.7; color: #334155; }
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="container nav">
+          <a href="index.html" class="brand">Biomod</a>
+          <div class="spacer"></div>
+          <nav class="nav-links">
+            <a href="index.html">Project</a> 
+            <a href="design.html">Design</a>
+            <a href="method.html">Method</a>
+            <a href="feasibility.html">Feasibility</a>
+            <a href="logbook.html">Logbook</a>
+            <a href="results.html">Results</a>
+            <a href="about-us.html">About Us</a>
+            <a href="future.html" class="active">Future</a>
+            <a href="elsi.html">ELSI</a>
+          </nav>
+          <button id="open-menu" class="hamburger" aria-label="Open menu"><span></span></button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+            <div class="mobile-panel">
+              <a href="index.html">Project</a>
+              <a href="design.html">Design</a>
+              <a href="method.html">Method</a>
+              </div>
+        </div>
+    </header>
+
+    <main class="content-page">
+      <div class="container inner">
+        <h1>Future</h1>
+        <p>This page is dedicated to the Future section. Here you will detail the innovative design of your biomolecular structures, the theoretical framework, and the components used.</p>
+      </div>
+    </main>
+
+    <script src="./ai-assistant.js" defer></script>
+    <script>
+      // 移动端菜单控制JS
+      (function(){ /* ... 菜单JS代码 ... */ })();
+      
+      // 初始化AI助手 - 气泡模式
+      document.addEventListener('DOMContentLoaded', function() {
+        initAIAssistant('dec4b5e652464152976117f453d9d3c1', 'bubble');
+      });
+    </script>
+  </body>
+</html>

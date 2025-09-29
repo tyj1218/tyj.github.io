@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biomod - Project</title>
+    <link rel="stylesheet" href="./agent-widget.css" />
+    <link rel="stylesheet" href="./ai-assistant.css" />
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; margin: 0; background-color: #000; }
+      a { color: inherit; text-decoration: none; }
+      .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+      header { position: sticky; top: 0; z-index: 100; backdrop-filter: saturate(120%) blur(6px); background: rgba(255,255,255,0.8); border-bottom: 1px solid #eef2f7; }
+      .nav { display: flex; align-items: center; height: 56px; }
+      .brand { font-weight: 700; color: #1f2937; }
+      .spacer { flex: 1; }
+      .nav-links { display: none; gap: 16px; font-size: 14px; }
+      .nav-links a { color: #334155; font-weight: 500; transition: color 0.2s; }
+      .nav-links a:hover { color: #007bff; }
+      .nav-links a.active { color: #007bff; font-weight: 700; }
+      .hamburger { width: 40px; height: 40px; border-radius: 10px; border: 1px solid #e5e7eb; display: grid; place-items: center; background: #fff; }
+      @media (min-width: 960px) { .nav-links { display: flex; } .hamburger { display: none; } }
+      .mobile-menu { position: fixed; inset: 0; background: rgba(15,23,42,0.5); display: none; z-index: 1000; }
+      .mobile-menu.open { display: block; }
+      .mobile-panel { position: absolute; top: 0; right: 0; width: 78vw; max-width: 360px; height: 100%; background: #ffffff; box-shadow: -8px 0 32px rgba(0,0,0,0.15); padding: 20px; overflow: auto; }
+      .mobile-panel a { display: block; padding: 14px 8px; font-size: 18px; color: #0f172a; border-bottom: 1px solid #f1f5f9; }
+      
+      .animation-wrapper { height: 200vh; position: relative; }
+      .animation-container { position: sticky; top: 0; width: 100%; height: 100vh; overflow: hidden; }
+      .main-content { position: relative; z-index: 10; background-color: #fff; }
+
+      .content-page { min-height: calc(100vh - 56px); display: flex; align-items: center; justify-content: center; padding: 40px 0; }
+      .content-page .inner { max-width: 800px; text-align: center; }
+      .content-page h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+      .content-page p { font-size: 1.2rem; line-height: 1.7; color: #334155; }
+    </style>
+  </head>
+  <body>
+    <div class="animation-wrapper">
+      <div class="animation-container" id="animation-container">
+        <svg viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <defs><radialGradient id="blackholeGradient" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:#000000;stop-opacity:1" /><stop offset="100%" style="stop-color:#1c1428;stop-opacity:1" /></radialGradient><radialGradient id="glowGradient" cx="50%" cy="50%" r="50%"><stop offset="60%" style="stop-color:rgba(255, 215, 0, 0.1);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(255, 215, 0, 0);stop-opacity:0" /></radialGradient></defs>
+            <rect width="100%" height="100%" fill="url(#blackholeGradient)" />
+            <g id="blackhole-group" style="transform-origin: center;"><circle id="blackhole-glow" cx="960" cy="540" r="400" fill="url(#glowGradient)"><animateTransform attributeName="transform" type="rotate" from="0 960 540" to="360 960 540" dur="20s" repeatCount="indefinite"/></circle><circle cx="960" cy="540" r="250" fill="none" stroke="#ffd700" stroke-width="2" opacity="0.6"></circle><circle cx="960" cy="540" r="200" fill="none" stroke="#ffd700" stroke-width="3" opacity="0.8"></circle><circle cx="960" cy="540" r="150" fill="#000000"></circle></g>
+        </svg>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <header>
+        <div class="container nav">
+          <a href="index.html" class="brand">Biomod</a>
+          <div class="spacer"></div>
+          <nav class="nav-links">
+            <a href="index.html" class="active">Project</a> 
+            <a href="design.html">Design</a>
+            <a href="method.html">Method</a>
+            <a href="feasibility.html">Feasibility</a>
+            <a href="logbook.html">Logbook</a>
+            <a href="results.html">Results</a>
+            <a href="about-us.html">About Us</a>
+            <a href="future.html">Future</a>
+            <a href="elsi.html">ELSI</a>
+          </nav>
+          <button id="open-menu" class="hamburger" aria-label="Open menu"><span></span></button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+            <div class="mobile-panel">
+              <a href="index.html">Project</a>
+              <a href="design.html">Design</a>
+              <a href="method.html">Method</a>
+              <a href="feasibility.html">Feasibility</a>
+              <a href="logbook.html">Logbook</a>
+              <a href="results.html">Results</a>
+              <a href="about-us.html">About Us</a>
+              <a href="future.html">Future</a>
+              <a href="elsi.html">ELSI</a>
+            </div>
+        </div>
+      </header>
+      
+      <section class="content-page">
+        <div class="container inner">
+          <h1>Project Overview</h1>
+          <p>This page is dedicated to the Project section. Here you can add all the text, images, and data related to your project's goals, motivations, and the scientific problem you aim to solve.</p>
+        </div>
+      </section>
+    </main>
+    
+    <script src="./agent-widget.js" defer></script>
+    <script src="./ai-assistant.js" defer></script>
+
+    <script>
+      // 关键改动：将我们自己的所有脚本都包裹在 DOMContentLoaded 事件中
+      document.addEventListener('DOMContentLoaded', function() {
+        
+        // 黑洞滚动动画JS
+        (function() {
+          const animationWrapper = document.querySelector('.animation-wrapper');
+          if (!animationWrapper) return;
+          
+          const animationContainer = document.getElementById('animation-container');
+          const blackholeGroup = document.getElementById('blackhole-group');
+          const ANIMATION_SCROLL_DISTANCE = animationWrapper.offsetHeight - window.innerHeight;
+          
+          function updateScrollAnimation() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop <= ANIMATION_SCROLL_DISTANCE) {
+              const scrollProgress = scrollTop / ANIMATION_SCROLL_DISTANCE;
+              const scale = 1 + (scrollProgress * 19);
+              let opacity = 1;
+              if (scrollProgress > 0.8) {
+                opacity = 1 - (scrollProgress - 0.8) / 0.2;
+              }
+              blackholeGroup.setAttribute('transform', `scale(${scale})`);
+              animationContainer.style.opacity = opacity;
+            }
+          }
+          
+          let ticking = false;
+          function handleScroll() {
+            if (!ticking) {
+              window.requestAnimationFrame(() => {
+                updateScrollAnimation();
+                ticking = false;
+              });
+              ticking = true;
+            }
+          }
+          window.addEventListener('scroll', handleScroll);
+          updateScrollAnimation();
+        })();
+
+        // 移动端菜单控制JS
+        (function(){
+          const menuBtn = document.getElementById('open-menu');
+          const mobileMenu = document.getElementById('mobile-menu');
+          if (!menuBtn || !mobileMenu) return;
+
+          function closeMenu() {
+              mobileMenu.classList.remove('open');
+              mobileMenu.setAttribute('aria-hidden', 'true');
+          }
+          function openMenu() {
+              mobileMenu.classList.add('open');
+              mobileMenu.setAttribute('aria-hidden', 'false');
+          }
+          
+          menuBtn.addEventListener('click', openMenu);
+          mobileMenu.addEventListener('click', function(e) {
+              if (e.target === mobileMenu || e.target.tagName === 'A') {
+                  closeMenu();
+              }
+          });
+        })();
+
+        // 初始化AI助手 - 首页模式
+        initAIAssistant('dec4b5e652464152976117f453d9d3c1', 'home');
+
+      });
+    </script>
+  </body>
+</html>

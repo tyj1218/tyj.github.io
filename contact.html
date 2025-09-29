@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>联系我们 - Biomod</title>
+    <link rel="stylesheet" href="./agent-widget.css" />
+    <link rel="stylesheet" href="./ai-assistant.css" />
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin: 0; }
+      header { position: sticky; top:0; background:#fff; border-bottom:1px solid #eef2f7; }
+      .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+      .nav { display:flex; align-items:center; height:56px; }
+      .brand { font-weight:700; }
+      .spacer { flex:1; }
+      .nav a { margin-left: 14px; color:#334155; }
+      main.container { padding: 40px 16px; }
+      .contact-section { margin-bottom: 40px; }
+      .contact-section h2 { margin-bottom: 20px; color: #1f2937; }
+      .contact-info { display: flex; flex-wrap: wrap; gap: 30px; }
+      .contact-card { flex: 1; min-width: 300px; padding: 20px; border-radius: 8px; background: #f8fafc; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+      .contact-card h3 { margin-top: 0; color: #0f172a; }
+      .contact-card p { margin-bottom: 8px; color: #334155; }
+      .contact-card a { color: #3b82f6; text-decoration: none; }
+      .contact-card a:hover { text-decoration: underline; }
+      @media (max-width: 768px) {
+        .contact-card { min-width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">Biomod</div>
+        <div class="spacer"></div>
+        <nav>
+          <a href="index.html">首页</a>
+          <a href="project.html">项目</a>
+          <a href="design.html">设计</a>
+          <a href="feasibility.html">可行性</a>
+          <a href="method.html">方法</a>
+          <a href="logbook.html">实验记录本</a>
+          <a href="results.html">结果</a>
+          <a href="about.html">关于我们</a>
+          <a href="elsi.html">ELSI</a>
+          <a href="future.html">未来</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <h1>联系我们</h1>
+      
+      <div class="contact-section">
+        <h2>吉林大学BIOMOD团队</h2>
+        <div class="contact-info">
+          <div class="contact-card">
+            <h3>团队联系方式</h3>
+            <p><strong>邮箱：</strong> <a href="mailto:biomod@jlu.edu.cn">biomod@jlu.edu.cn</a></p>
+            <p><strong>电话：</strong> +86-431-12345678</p>
+            <p><strong>地址：</strong> 吉林省长春市朝阳区前进大街2699号吉林大学</p>
+          </div>
+          <div class="contact-card">
+            <h3>指导教师</h3>
+            <p><strong>姓名：</strong> 张教授</p>
+            <p><strong>邮箱：</strong> <a href="mailto:professor@jlu.edu.cn">professor@jlu.edu.cn</a></p>
+            <p><strong>办公室：</strong> 吉林大学生命科学学院A栋305室</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-section">
+        <h2>BIOMOD 2025活动信息</h2>
+        <div class="contact-info">
+          <div class="contact-card">
+            <h3>活动详情</h3>
+            <p><strong>时间：</strong> 2025年10月</p>
+            <p><strong>地点：</strong> 吉林大学</p>
+            <p><strong>承办方：</strong> 吉林大学生命科学学院</p>
+            <p><strong>网站：</strong> <a href="https://biomod.net" target="_blank">https://biomod.net</a></p>
+          </div>
+          <div class="contact-card">
+            <h3>参赛咨询</h3>
+            <p><strong>报名邮箱：</strong> <a href="mailto:register@biomod2025.org">register@biomod2025.org</a></p>
+            <p><strong>咨询电话：</strong> +86-431-87654321</p>
+            <p><strong>微信公众号：</strong> BIOMOD2025</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="agent-sidebar" aria-hidden="true">
+      <div class="agent-header">
+        <div class="agent-title">网站助手</div>
+        <button id="agent-close" aria-label="关闭">×</button>
+      </div>
+      <div class="agent-content">
+        <div class="agent-chat" id="agent-chat">
+          <div class="agent-messages" id="agent-messages"></div>
+          <div class="agent-input-row">
+            <textarea id="agent-input" placeholder="输入问题并回车，或点发送…" rows="1"></textarea>
+            <button id="agent-send">发送</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="agent-bubble" aria-label="打开助手">💬</button>
+
+    <script>
+      window.__AGENT_CONFIG__ = { appId: 'biomod-demo', mockMode: true };
+    </script>
+    <script src="./agent-widget.js"></script>
+    <script src="./ai-assistant.js" defer></script>
+    <script>
+      // 初始化AI助手 - 气泡模式
+      document.addEventListener('DOMContentLoaded', function() {
+        initAIAssistant('dec4b5e652464152976117f453d9d3c1', 'bubble');
+      });
+    </script>
+  </body>
+</html>

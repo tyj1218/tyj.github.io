@@ -1,0 +1,98 @@
+#agent-bubble {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 24px rgba(59,130,246,0.35);
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2147483000;
+}
+
+#agent-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 380px;
+  max-width: 92vw;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -8px 0 32px rgba(0,0,0,0.15);
+  transform: translateX(100%);
+  transition: transform 0.28s ease;
+  z-index: 2147483001;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #e5e7eb;
+}
+
+#agent-sidebar.open { transform: translateX(0); }
+
+.agent-header {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px 0 14px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #f8fafc;
+}
+
+.agent-title { font-weight: 600; color: #0f172a; }
+
+#agent-close {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: #334155;
+}
+#agent-close:hover { background: #eef2f7; }
+
+.agent-content { flex: 1; display: flex; flex-direction: column; }
+
+.agent-chat { display: flex; flex-direction: column; height: 100%; }
+.agent-messages { flex: 1; overflow: auto; padding: 12px; }
+.agent-message { margin-bottom: 10px; }
+.agent-message.user { text-align: right; }
+.agent-message.assistant { text-align: left; }
+
+.agent-input-row {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+.agent-input-row textarea {
+  flex: 1;
+  resize: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+.agent-input-row button {
+  padding: 0 14px;
+  border-radius: 10px;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+}
+
+@supports (padding: max(0px)) {
+  #agent-bubble { bottom: max(20px, env(safe-area-inset-bottom)); }
+}
+
+
