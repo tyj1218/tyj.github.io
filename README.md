@@ -83,4 +83,4 @@ This project is part of the BIOMOD competition and follows the competition guide
 
 ---
 
-**BIOMOD 2024** - Northeastern University Team
+**BIOMOD 2024** - Jilin University Team
